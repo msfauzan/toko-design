@@ -13,10 +13,20 @@ class UserController extends Controller
     {
         $user = User::where(['email' => $req->email])->first();
         if (!$user || !Hash::check($req->password, $user->password)) {
-            return "Username atau Password tidak ditemukan";
+            echo '<script>alert("Password or Username can not be found")</script>';
         } else {
             $req->session()->put('user', $user);
             return redirect('/');
         }
+    }
+    function register(Request $req)
+    {
+        // return $req->input();
+        $user = new User;
+        $user->name = $req->name;
+        $user->email = $req->email;
+        $user->password = Hash::make($req->password);
+        $user->save();
+        return redirect('/login');
     }
 }

@@ -19,7 +19,8 @@
                 <button class="btn btn-primary">Add to Wishlist</button>
             </form>
             <br>
-            <button class="btn btn-success">Order Now</button>
+            <h4>Contact : {{$product['designercontact']}}</h4>
+            {{-- <button class="btn btn-success"></button> --}}
         </div>
     </div>
     
