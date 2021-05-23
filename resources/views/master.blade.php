@@ -20,6 +20,37 @@
         height: 500px;
         padding-top: 100px;
     }
+    img.slider-img {
+        height: 400px !important;
+        width: 800px;
+        margin: 0 auto;
+    }
+    .custom-product {
+        height: 600px;
+    }
+    .trending-image {
+        height: 250px;
+        margin-bottom: 20px;
+    }
+    .trending-item {
+        float: left;
+        width: 20%;
+        margin-right: 30px;
+    }
+    .trending-wrapper {
+        margin: 60px;
+    }
+    .detail-img {
+        height: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .search-box {
+        width: 500px !important;
+    }
+    .slider-text {
+        text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+    }
 </style>
 
 <body>
