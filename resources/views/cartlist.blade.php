@@ -15,7 +15,12 @@
                             <div class="">
                                 <h2>{{ $item->name }}</h2>
                                 <h5>Category : {{ $item->category }}</h5>
-                                <a href="/removecart/{{ $item->cart_id }}" class="btn btn-danger">Remove</a>
+                                <form action="/removecart/{{ $item->cart_id }}"
+                                    onsubmit="return confirm('Do you really want to remove this design from Wish List?');">
+                                    <button class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                </form>
+                                {{-- <a href="/removecart/{{ $item->cart_id }}" class="btn btn-danger"><i
+                                        class="fas fa-trash-alt"></i></a> --}}
                             </div>
                         </div>
                         <div class="col-sm-4">

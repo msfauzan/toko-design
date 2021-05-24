@@ -13,16 +13,15 @@
                 <h4>Category: {{ $product['category'] }}</h4>
                 <h4>{{ $product['description'] }}</h4>
                 <h3>Estimated Cost : Rp. {{ $product['price'] }},-</h3>
-                <br>
                 <form action="/add_to_cart" method="POST">
                     @csrf
                     <input type="hidden" name="product_id" value={{ $product['id'] }}>
-                    <button class="btn btn-primary">Add to Wishlist</button>
+                    <button class="btn btn-danger"><i class="far fa-heart"></i></button>
                 </form>
-                <br>
                 {{-- <h4>Contact : {{ $product['designercontact'] }}</h4> --}}
-                <h4>Contact Designer here</h4>
-                <a href="mailto:{{ $product['designercontact'] }}" class="button fa fa-envelope"></a>
+                <h4>Please Contact Designer here</h4>
+                <a href="mailto:{{ $product['designercontact'] }}?subject=Design from TokoDesign&body=I just saw your design on TokoDesign Webpage, and that is awesome! I would like to order design from you, Please get in touch."
+                    class="btn btn-success fa fa-envelope"></a>
                 {{-- <button class="btn btn-success"></button> --}}
             </div>
         </div>
