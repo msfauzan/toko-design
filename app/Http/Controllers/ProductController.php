@@ -58,6 +58,6 @@ class ProductController extends Controller
     function removeCart($id)
     {
         Cart::destroy($id);
-        return redirect('cartlist');
+        return redirect('wishlist');
     }
 }

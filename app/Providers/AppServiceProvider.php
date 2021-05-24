@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Cookie;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -24,5 +25,13 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        view()->composer('layouts.master', function ($view) {
+            $theme = \Cookie::get('theme');
+            if ($theme != 'dark' && $theme != 'light') {
+                $theme = 'light';
+            }
+
+            $view->with('theme', $theme);
+        });
     }
 }

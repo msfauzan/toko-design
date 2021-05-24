@@ -18,6 +18,7 @@
                   <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                 </div>
                 <button type="submit" class="btn btn-default">Register</button>
+                <?php echo "&nbsp" ?><a href="/login">Already have an account?</a>
               </form>
         </div>
     </div>
